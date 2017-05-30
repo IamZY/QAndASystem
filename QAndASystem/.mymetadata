@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="QAndASystem"
+  id="myeclipse.1483748944868"
+  context-root="/QAndASystem"
+  j2ee-spec="5.0"
+  archive="QAndASystem.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

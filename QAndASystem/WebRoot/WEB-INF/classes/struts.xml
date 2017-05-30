@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<package name="struts" extends="struts-default">
+	
+		<action name="SubjectAction" class="com.action.SubjectAction" method="findSub">
+			<result name="success">/index.jsp</result>
+		</action>
+		
+		<action name="RegisterAction" class="com.action.RegisterAction" method="register">
+			<result name="success">/login.jsp</result>
+		</action>
+		
+		<action name="LoginAction" class="com.action.LoginAction" method="login">
+			<result name="success" type="chain">SubjectAction</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		
+		<action name="findSubjectAction" class="com.action.SubjectAction" method="findProblemById">
+			<result name="success">/showProblem.jsp</result>
+			<result name="error">/login.jsp</result>
+		</action>
+		
+		
+		<action name="findMyProblemAction" class="com.action.SubjectAction" method="findMyProblemById">
+			<result name="success">/stuInfor.jsp</result>
+			<result name="error">/login.jsp</result>
+		</action>
+		
+		
+		<action name="findProblemAction" class="com.action.ProblemAction" method="findproblem">
+			<result name="success">/findProblem.jsp</result>
+			<result name="error">/login.jsp</result>	
+		</action>
+		
+		<action name="addAction" class="com.action.ProblemAction" method="addProblem">
+			<result name="success">/addProblemSuccess.jsp</result>
+			<result name="error">/login.jsp</result>
+		</action>
+		
+		<action name="updateQuestionAction" class="com.action.ProblemAction" method="updateProblem">
+			<result name="success">/answerSuccess.jsp</result>
+			<result name="error">/login.jsp</result>
+		</action>
+		
+		
+		<action name="delMyProAction" class="com.action.ProblemAction" method="delMyProblem">
+			<result name="success" type="chain">findMyProblemAction</result>
+		</action>
+		
+		
+		<action name="updateMyProAction" class="com.action.ProblemAction" method="updateMyProblem">
+			<result name="success" type="chain">findMyProblemAction</result>	
+		</action>
+		
+		
+		
+		
+	</package>
+</struts>

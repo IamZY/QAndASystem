@@ -1,0 +1,18 @@
+@CHARSET "UTF-8";
+*{
+	margin:0px;
+	padding:0px;
+	booder:0px
+}
+
+body{
+	font-family:宋体;
+	color:grey
+}
+
+#main{
+	margin-left:100px;
+	color:grey	
+}
+
+
